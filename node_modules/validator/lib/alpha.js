@@ -1,10 +1,4 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.commaDecimal = exports.dotDecimal = exports.farsiLocales = exports.arabicLocales = exports.englishLocales = exports.decimal = exports.alphanumeric = exports.alpha = void 0;
-var alpha = {
+export var alpha = {
   'en-US': /^[A-Z]+$/i,
   'az-AZ': /^[A-VXYZÇƏĞİıÖŞÜ]+$/i,
   'bg-BG': /^[А-Я]+$/i,
@@ -39,8 +33,7 @@ var alpha = {
   fa: /^['آاءأؤئبپتثجچحخدذرزژسشصضطظعغفقکگلمنوهةی']+$/i,
   'hi-IN': /^[\u0900-\u0961]+[\u0972-\u097F]*$/i
 };
-exports.alpha = alpha;
-var alphanumeric = {
+export var alphanumeric = {
   'en-US': /^[0-9A-Z]+$/i,
   'az-AZ': /^[0-9A-VXYZÇƏĞİıÖŞÜ]+$/i,
   'bg-BG': /^[0-9А-Я]+$/i,
@@ -74,14 +67,11 @@ var alphanumeric = {
   fa: /^['0-9آاءأؤئبپتثجچحخدذرزژسشصضطظعغفقکگلمنوهةی۱۲۳۴۵۶۷۸۹۰']+$/i,
   'hi-IN': /^[\u0900-\u0963]+[\u0966-\u097F]*$/i
 };
-exports.alphanumeric = alphanumeric;
-var decimal = {
+export var decimal = {
   'en-US': '.',
   ar: '٫'
 };
-exports.decimal = decimal;
-var englishLocales = ['AU', 'GB', 'HK', 'IN', 'NZ', 'ZA', 'ZM'];
-exports.englishLocales = englishLocales;
+export var englishLocales = ['AU', 'GB', 'HK', 'IN', 'NZ', 'ZA', 'ZM'];
 
 for (var locale, i = 0; i < englishLocales.length; i++) {
   locale = "en-".concat(englishLocales[i]);
@@ -91,8 +81,7 @@ for (var locale, i = 0; i < englishLocales.length; i++) {
 } // Source: http://www.localeplanet.com/java/
 
 
-var arabicLocales = ['AE', 'BH', 'DZ', 'EG', 'IQ', 'JO', 'KW', 'LB', 'LY', 'MA', 'QM', 'QA', 'SA', 'SD', 'SY', 'TN', 'YE'];
-exports.arabicLocales = arabicLocales;
+export var arabicLocales = ['AE', 'BH', 'DZ', 'EG', 'IQ', 'JO', 'KW', 'LB', 'LY', 'MA', 'QM', 'QA', 'SA', 'SD', 'SY', 'TN', 'YE'];
 
 for (var _locale, _i = 0; _i < arabicLocales.length; _i++) {
   _locale = "ar-".concat(arabicLocales[_i]);
@@ -101,8 +90,7 @@ for (var _locale, _i = 0; _i < arabicLocales.length; _i++) {
   decimal[_locale] = decimal.ar;
 }
 
-var farsiLocales = ['IR', 'AF'];
-exports.farsiLocales = farsiLocales;
+export var farsiLocales = ['IR', 'AF'];
 
 for (var _locale2, _i2 = 0; _i2 < farsiLocales.length; _i2++) {
   _locale2 = "fa-".concat(farsiLocales[_i2]);
@@ -111,10 +99,8 @@ for (var _locale2, _i2 = 0; _i2 < farsiLocales.length; _i2++) {
 } // Source: https://en.wikipedia.org/wiki/Decimal_mark
 
 
-var dotDecimal = ['ar-EG', 'ar-LB', 'ar-LY'];
-exports.dotDecimal = dotDecimal;
-var commaDecimal = ['bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-ZM', 'es-ES', 'fr-CA', 'fr-FR', 'id-ID', 'it-IT', 'ku-IQ', 'hi-IN', 'hu-HU', 'nb-NO', 'nn-NO', 'nl-NL', 'pl-PL', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS@latin', 'sr-RS', 'sv-SE', 'tr-TR', 'uk-UA', 'vi-VN'];
-exports.commaDecimal = commaDecimal;
+export var dotDecimal = ['ar-EG', 'ar-LB', 'ar-LY'];
+export var commaDecimal = ['bg-BG', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en-ZM', 'es-ES', 'fr-CA', 'fr-FR', 'id-ID', 'it-IT', 'ku-IQ', 'hi-IN', 'hu-HU', 'nb-NO', 'nn-NO', 'nl-NL', 'pl-PL', 'pt-PT', 'ru-RU', 'sl-SI', 'sr-RS@latin', 'sr-RS', 'sv-SE', 'tr-TR', 'uk-UA', 'vi-VN'];
 
 for (var _i3 = 0; _i3 < dotDecimal.length; _i3++) {
   decimal[dotDecimal[_i3]] = decimal['en-US'];
